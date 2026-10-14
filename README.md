@@ -1,8 +1,8 @@
 # Cycling Explorer
 
-Every Strava activity on one map, filterable, with your [Squadrats](https://squadrats.com)
-tiles as a layer you can toggle underneath — plus two ways to get "roads I've already ridden"
-into your mapping software:
+Every [Strava](https://www.strava.com) activity on one map, filterable, with your
+[Squadrats](https://squadrats.com) tiles as a layer you can toggle underneath — plus two ways to
+get "roads I've already ridden" into your mapping software:
 
 1. **A live XYZ tile overlay** served by this app at `/api/tiles/{z}/{x}/{y}.png`, honouring
    whatever filters you have set — or at `/api/tiles/live/{z}/{x}/{y}.png`, which always follows
@@ -13,6 +13,12 @@ Squadrats get their own XYZ URL too, so your mapping software can show both over
 
 Runs entirely on your machine. Tokens, cached activities and Squadrats tiles live in `./data`
 (gitignored).
+
+![Strava activities over Squadrats and squadratinhos](docs/screenshots/overview.png)
+
+| Squadrats: yard and übersquadrat outlines | Strava: filters on a light basemap |
+| --- | --- |
+| ![Squadrats layers with the yard and übersquadrat](docs/screenshots/squadrats.png) | ![Strava activities with the filter sidebar](docs/screenshots/strava.png) |
 
 ```bash
 npm install && npm run dev
