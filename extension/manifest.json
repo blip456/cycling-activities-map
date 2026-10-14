@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Cycling Explorer",
+  "version": "1.1.0",
+  "description": "Copies your own Strava activities and Squadrats tiles into the locally running Cycling Explorer app.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.strava.com/*",
+    "https://squadrats.com/*",
+    "https://*.squadrats.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Sync to Cycling Explorer (on strava.com: activities · on squadrats.com: tiles)"
+  }
+}

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-900: #0b0e14;
+  --color-ink-800: #11151d;
+  --color-ink-700: #171d27;
+  --color-ink-600: #212936;
+  --color-ink-500: #2c3543;
+  --color-strava: #fc5200;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-ink-900);
+  color: #e6e9ef;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slim scrollbars in the filter rail */
+.rail::-webkit-scrollbar {
+  width: 10px;
+}
+.rail::-webkit-scrollbar-thumb {
+  background: var(--color-ink-600);
+  border-radius: 999px;
+  border: 3px solid var(--color-ink-800);
+}
+
+input[type="range"] {
+  accent-color: var(--color-strava);
+}
+
+.maplibregl-popup-content {
+  background: var(--color-ink-700);
+  color: #e6e9ef;
+  border: 1px solid var(--color-ink-500);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.45);
+}
+.maplibregl-popup-tip {
+  border-top-color: var(--color-ink-700) !important;
+  border-bottom-color: var(--color-ink-700) !important;
+}
+.maplibregl-ctrl-group {
+  background: var(--color-ink-700) !important;
+  border: 1px solid var(--color-ink-500);
+}
+.maplibregl-ctrl-group button + button {
+  border-top-color: var(--color-ink-500) !important;
+}
+.maplibregl-ctrl-group button .maplibregl-ctrl-icon {
+  filter: invert(1);
+}
+.maplibregl-ctrl-attrib {
+  background: rgb(11 14 20 / 0.75) !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: #9aa4b2 !important;
+}
